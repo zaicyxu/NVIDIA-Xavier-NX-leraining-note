@@ -50,7 +50,8 @@ sudo pip3 install jetson-stats
 
 If you see the following information, the installation is successful:
 
-![https://www.yahboom.com/Public/ueditor/php/upload/image/20201226/1608970559286499.png](https://www.yahboom.com/Public/ueditor/php/upload/image/20201226 /1608970559286499.png)
+![Uploading image.png…]()
+
 
 ### **2. Start Jetson-stats**
 

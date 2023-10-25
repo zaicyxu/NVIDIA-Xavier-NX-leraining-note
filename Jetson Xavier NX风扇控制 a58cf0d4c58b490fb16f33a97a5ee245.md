@@ -1,77 +1,77 @@
-# Jetson Xavier NX风扇控制
+#JetsonXavierNXFanControl
 
-## **Xavier(Xavier,NX, Nano, AGX Xavier, TX1, TX2)开机启动风扇**
+## **Xavier(Xavier,NX, Nano, AGX Xavier, TX1, TX2) turns on the fan**
 
-jetson Xavier开机自动启动风扇的方法很简单，不要设置脚本，一个软件搞定。
+The method to automatically start the fan on jetson Xavier is very simple. No need to set up a script, just a software can do it.
 
-jetson-stats,jetson-stats是一个用来监控和控制jetson系列（Xavier NX, Nano, AGX Xavier, TX1, TX2）硬件平台的一个软件。
+jetson-stats, jetson-stats is a software used to monitor and control the jetson series (Xavier NX, Nano, AGX Xavier, TX1, TX2) hardware platform.
 
-1. **安装 Python**：首先确认您的 Jetson 上已经安装了 Python。您可以在终端中输入以下命令来检查是否已安装 Python：
+1. **Install Python**: First make sure Python is installed on your Jetson. You can check whether Python is installed by entering the following command in the terminal:
     
-    ```bash
-    bashCopy code
-    python3 --version
+     ```bash
+     bashCopy code
+     python3 --version
     
-    ```
+     ```
     
-    如果系统中没有安装 Python，您需要先安装 Python。使用以下命令安装 Python 3：
+     If Python is not installed on your system, you need to install Python first. Install Python 3 using the following command:
     
-    ```bash
-    bashCopy code
-    sudo apt-get update
-    sudo apt-get install python3
+     ```bash
+     bashCopy code
+     sudo apt-get update
+     sudo apt-get install python3
     
-    ```
+     ```
     
-2. **安装 pip**：一旦安装了 Python，您可以安装 Python 包管理工具 **`pip`**。在终端中输入以下命令：
+2. **Install pip**: Once Python is installed, you can install the Python package management tool **`pip`**. Enter the following command in the terminal:
     
-    ```bash
-    bashCopy code
-    sudo apt-get install python3-pip
+     ```bash
+     bashCopy code
+     sudo apt-get install python3-pip
     
-    ```
+     ```
     
-    这将会安装 **`pip`** 并使其可用于 Python 3。
+     This will install **`pip`** and make it available for Python 3.
     
-3. **验证安装**：安装完成后，您可以在终端中输入以下命令来验证 **`pip`** 是否安装成功：
+3. **Verify installation**: After the installation is complete, you can enter the following command in the terminal to verify whether **`pip`** is installed successfully:
     
-    ```bash
-    bashCopy code
-    pip3 --version
+     ```bash
+     bashCopy code
+     pip3 --version
     
-    ```
+     ```
     
 
-### **1.安装jetson-stats**
+### **1.Install jetson-stats**
 
 ```
-sudo pip3 install jetson-stats
+sudo pip3 install jetson-stats
 ```
 
-看到如下信息说明安装成功：
+If you see the following information, the installation is successful:
 
-![https://www.yahboom.com/Public/ueditor/php/upload/image/20201226/1608970559286499.png](https://www.yahboom.com/Public/ueditor/php/upload/image/20201226/1608970559286499.png)
+![https://www.yahboom.com/Public/ueditor/php/upload/image/20201226/1608970559286499.png](https://www.yahboom.com/Public/ueditor/php/upload/image/20201226 /1608970559286499.png)
 
-### **2.启动Jetson-stats**
+### **2. Start Jetson-stats**
 
-执行此代码第一遍会报错，因为第一遍需要导入命令，再次执行即可。
+An error will be reported the first time you execute this code, because the command needs to be imported the first time, and you can just execute it again.
 
 ```
-sudo jtop
+sudo jtop
 ```
 
-### 
+###
 
-![7110707ef852a3acb8ada97b6832d780.jpg](Jetson%20Xavier%20NX%E9%A3%8E%E6%89%87%E6%8E%A7%E5%88%B6%20a58cf0d4c58b490fb16f33a97a5ee245/7110707ef852a3acb8ada97b6832d780.jpg)
+![7110707ef852a3acb8ada97b6832d780.jpg](Jetson%20Xavier%20NX%E9%A3%8E%E6%89%87%E6%8E%A7%E5%88%B6%20a58cf0d4c58b490fb16f33a97a5ee245/71 10707ef852a3acb8ada97b6832d780.jpg)
 
-### **3.设置开机启动风扇**
+### **3. Set the fan to start at boot**
 
-点击CTRL进入风扇控制界面
+Click CTRL to enter the fan control interface
 
-按下按键**s**和**e**设置jetson_clocks **Running**和boot **Enable**，如图所示：
+Press the keys **s** and **e** to set jetson_clocks **Running** and boot **Enable**, as shown in the figure:
 
-![e060283495705e52bfe1c81954d5943b.jpg](Jetson%20Xavier%20NX%E9%A3%8E%E6%89%87%E6%8E%A7%E5%88%B6%20a58cf0d4c58b490fb16f33a97a5ee245/e060283495705e52bfe1c81954d5943b.jpg)
+![e060283495705e52bfe1c81954d5943b.jpg](Jetson%20Xavier%20NX%E9%A3%8E%E6%89%87%E6%8E%A7%E5%88%B6%20a58cf0d4c58b490fb16f33a97a5ee245 /e060283495705e52bfe1c81954d5943b.jpg)
 
-根据自己需求，将Profiles, quiet, cool分别调整到合适的转速。一般50-70较为合适（0%-100%）
+According to your own needs, adjust Profiles, quiet, and cool to the appropriate speed respectively. Generally, 50-70 is more suitable (0%-100%)
 
-点击Quit退出软件。
+Click Quit to exit the software.

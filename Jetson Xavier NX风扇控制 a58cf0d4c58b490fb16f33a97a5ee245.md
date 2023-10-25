@@ -62,7 +62,8 @@ sudo jtop
 
 ###
 
-![7110707ef852a3acb8ada97b6832d780.jpg](Jetson%20Xavier%20NX%E9%A3%8E%E6%89%87%E6%8E%A7%E5%88%B6%20a58cf0d4c58b490fb16f33a97a5ee245/71 10707ef852a3acb8ada97b6832d780.jpg)
+![image](https://github.com/zaicyxu/NVIDIA-Xavier-NX-leraining-note/assets/106503993/b65eb122-486a-4e18-9107-2013eb6071d6)
+
 
 ### **3. Set the fan to start at boot**
 
@@ -70,7 +71,8 @@ Click CTRL to enter the fan control interface
 
 Press the keys **s** and **e** to set jetson_clocks **Running** and boot **Enable**, as shown in the figure:
 
-![e060283495705e52bfe1c81954d5943b.jpg](Jetson%20Xavier%20NX%E9%A3%8E%E6%89%87%E6%8E%A7%E5%88%B6%20a58cf0d4c58b490fb16f33a97a5ee245 /e060283495705e52bfe1c81954d5943b.jpg)
+![image](https://github.com/zaicyxu/NVIDIA-Xavier-NX-leraining-note/assets/106503993/c2d7fcf9-472a-4312-895a-d62a56451b9d)
+
 
 According to your own needs, adjust Profiles, quiet, and cool to the appropriate speed respectively. Generally, 50-70 is more suitable (0%-100%)
 

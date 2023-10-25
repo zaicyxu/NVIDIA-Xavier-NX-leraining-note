@@ -1,58 +1,58 @@
 # Jetson NX update CMake
 
-如果在Jetson设备上更新特定版本的CMake，可以尝试以下步骤：
+If you are updating a specific version of CMake on your Jetson device, you can try the following steps:
 
-1. 首先，确保Jetson设备已连接到网络。
-2. 打开终端，运行以下命令来安装CMake的依赖项：
+1. First, make sure the Jetson device is connected to the network.
+2. Open a terminal and run the following command to install CMake dependencies:
     
-    ```bash
-    sudo apt-get update
-    sudo apt-get install -y libssl-dev
-    ```
+     ```bash
+     sudo apt-get update
+     sudo apt-get install -y libssl-dev
+     ```
     
-3. 接下来，可以通过以下命令下载并编译所需版本的CMake。在这个例子中，使用版本3.27.2作为示例：
+3. Next, you can download and compile the required version of CMake with the following command. In this example, version 3.27.2 is used as an example:
     
-    ```bash
+     ```bash
     
-    wget https://github.com/Kitware/CMake/releases/download/v3.27.2/cmake-3.27.2.tar.gz
-    tar -xzvf cmake-3.27.2.tar.gz
-    cd cmake-3.27.2
-    ./bootstrap
-    ```
+     wget https://github.com/Kitware/CMake/releases/download/v3.27.2/cmake-3.27.2.tar.gz
+     tar -xzvf cmake-3.27.2.tar.gz
+     cd cmake-3.27.2
+     ./bootstrap
+     ```
     
-    然后用nproc查看内核个数
+     Then use nproc to check the number of cores
     
-    ```ruby
-    nproc
+     ```ruby
+     nproc
     
-    ```
+     ```
     
-    nx内核是几， make -j后面就是几。
+     The number of nx kernel is the number followed by make -j.
     
-    比如，如果nproc显示4，那么命令如下：
+     For example, if nproc displays 4, the command is as follows:
     
-    ```go
-    make -j4
-    sudo make install
+     ```go
+     make -j4
+     sudo make install
     
-    ```
+     ```
     
-    这将下载CMake源代码，解压缩并编译安装。如果需要其他版本，只需替换上述URL中的版本号。
+     This will download the CMake source code, unzip it and compile it for installation. If you need another version, just replace the version number in the above URL.
     
-4. 安装完成后，可以使用以下命令验证CMake是否已成功更新到指定版本：
+4. After the installation is complete, you can use the following command to verify whether CMake has been successfully updated to the specified version:
     
-    ```bash
-    cmake --version
-    ```
+     ```bash
+     cmake --version
+     ```
     
 
-请注意，编译CMake可能需要一些时间和资源。确保Jetson设备具有足够的磁盘空间和计算资源来完成编译过程。
+Please note that compiling CMake may require some time and resources. Make sure the Jetson device has enough disk space and computing resources to complete the compilation process.
 
-如果只想更新现有的CMake版本而不编译新版本，可以尝试使用以下命令：
+If you just want to update an existing CMake version without compiling a new version, you can try using the following command:
 
 ```bash
 sudo apt-get update
 sudo apt-get install --only-upgrade cmake
 ```
 
-请根据需求选择适当的方法来更新CMake。
+Please choose the appropriate method to update CMake according to your needs.
